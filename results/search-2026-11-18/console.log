@@ -1,0 +1,16 @@
+2026-11-18 17:35:08 search start: 4.0 h, 2 jobs, 1800 s per job
+2026-11-18 18:06:51 r023309.txt  [k4 rockaway-start fresh]  on time 22:13  median 24:14  p90 25:18 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 18:06:55 r023310.txt  [s0 rockaway-start fresh]  on time 21:47  median 25:45  p90 26:36 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 18:38:39 r023311.txt  [s0 rockaway-start fresh]  on time 21:15  median 25:09  p90 26:17 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 18:38:42 r023312.txt  [s0 rockaway-start fresh]  on time 21:46  median 26:22  p90 27:26 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:08:56 r023314.txt  [k4 rockaway-start elite]  on time 23:04  median 25:13  p90 26:32 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:10:19 r023313.txt  [k4 rockaway-start fresh]  on time 23:04  median 23:56  p90 25:29 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:40:33 r023315.txt  [k4 free fresh]  on time 23:12  median 24:59  p90 25:42 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:40:36 r023316.txt  [s0 rockaway-start elite]  on time 21:15  median 25:09  p90 26:17 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:10:50 r023318.txt  [s0 rockaway-start elite]  on time 22:04  median 32:58  p90 33:16 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:12:14 r023317.txt  [s0 free fresh]  on time 21:53  median 25:28  p90 26:34 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:40:58 r023319.txt  [k4 rockaway-start elite]  on time 23:04  median 25:13  p90 26:32 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:43:51 r023320.txt  [k4 rockaway-start fresh]  on time 23:30  median 24:26  p90 25:26 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 21:12:35 r023321.txt  [k4 free fresh]  on time 23:23  median 24:49  p90 25:24 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 21:13:58 r023322.txt  [k4 rockaway-start elite]  on time 22:43  median 23:46  p90 25:03 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 21:13:58 search end. leaderboard: out/search/leaderboard.csv
