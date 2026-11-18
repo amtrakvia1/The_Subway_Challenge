@@ -6,8 +6,8 @@ usage: search_driver.py --hours 8 [--jobs N] [--secs 1800] [--free-frac 0.2] [--
 
 Each job is a randomly chosen configuration:
   tables      tab/k4 (2 min margin on every change, 70% of jobs) or tab/s0 (no margin, 30%)
-  endpoints   start in the Rockaways (Far Rockaway or Rockaway Park) between 00:00 and 04:00, finish at
-              Flushing-Main St (what Matthew Ahn did for both his records); --free-frac of jobs are unconstrained
+  endpoints   start in the Rockaways (Far Rockaway or Rockaway Park) between 00:00 and 04:00, finish anywhere
+              (a Flushing finish is not used: Flushing-bound 7s skip 52 St and 69 St); --free-frac of jobs are unconstrained
   init        fresh ("static" first stage) or, --elite-frac of the time, a route from the current top 10
 Scoring: on-time duration (bin/sim dur) and the real-data delay model (bin/sim mc, 30 days, fixed seed so all routes
 face the same days). Leaderboard order: median finish under delays. Top 20 kept in out/search/top/.
@@ -33,7 +33,7 @@ net = json.load(open('data/net.json'))
 st, da = net['stations'], net['datoms']
 start_atoms = [k for k, d in enumerate(da) if st[d['stations'][0]]['id'] in ('H11', 'H15')]
 end_atoms = [k for k, d in enumerate(da) if st[d['stations'][-1]]['id'] == '701']
-assert start_atoms and end_atoms, 'could not find the Rockaway / Flushing segments in data/net.json'
+assert start_atoms, 'could not find the Rockaway segments in data/net.json'
 LB = OUT + '/leaderboard.csv'
 FIELDS = ['file', 'config', 'on_time', 'median', 'p10', 'p90', 'beat_record_days', 'days', 'start', 'start_station', 'end_station',
           'runs_mi', 'median_s', 'on_time_s']
@@ -86,13 +86,13 @@ def launch(seed):
     if init != 'static' and not free:
         # an elite route may come from a free run; only reuse it for constrained runs if it satisfies the endpoints
         L = open(init).read().split()
-        if int(L[2]) not in start_atoms or int(L[-1]) not in end_atoms: init = 'static'
-    cfg = '%s %s %s' % (tab.split('/')[1], 'free' if free else 'rock->flushing', 'elite' if init != 'static' else 'fresh')
+        if int(L[2]) not in start_atoms: init = 'static'
+    cfg = '%s %s %s' % (tab.split('/')[1], 'free' if free else 'rockaway-start', 'elite' if init != 'static' else 'fresh')
     f = '%s/runs/r%06d.txt' % (OUT, seed)
     env = {**os.environ, 'ACCEPT': 'rrt', 'SHARED_TABLES': '1'}
     args = ['./bin/solve', 'data', tab, str(a.secs), str(seed), f, init, '40', '1', '60', '30']
     if not free:
-        env['START_ATOMS'] = ','.join(map(str, start_atoms)); env['END_ATOMS'] = ','.join(map(str, end_atoms))
+        env['START_ATOMS'] = ','.join(map(str, start_atoms))
         args += ['-1', '0', '0', '480']
     p = subprocess.Popen(args, env=env, stdout=subprocess.DEVNULL, stderr=open(f[:-4] + '.log', 'w'))
     return p, f, cfg

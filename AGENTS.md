@@ -2,7 +2,8 @@
 
 Goal: find a route through all 472 NYC subway stations that beats the Guinness record of 22:14:10 (Kate Jones, 2023)
 under realistic delays. Matthew Ahn did 469 stations in 21:28:14 in 2016 (start Rockaway Park 02:02, finish
-Flushing-Main St), so a ~21:30 plan that survives real delays is the target.
+Flushing-Main St), so a ~21:30 plan that survives real delays is the target. Do NOT force a Flushing finish: since
+2025-26, Flushing-bound 7 trains skip 52 St and 69 St, so those must be covered Manhattan-bound.
 
 Read `README.md` (the model) and `docs/HANDOFF.md` (everything tried so far and what it showed) before changing code.
 

@@ -209,8 +209,9 @@ delays is. Rescore with DATA=data_t for routes built on data_t (datom ids differ
 
 ## 18 Nov: setup for long unattended search (Codex / laptop)
 * `./run_search.sh <hours> [jobs] [secs]` builds from the bundled `gtfs_subway.zip` and runs `src/search_driver.py`.
-* New solver options: `START_ATOMS` / `END_ATOMS` (comma-separated directed-atom ids; the driver fixes the start to the
-  Rockaways 00:00-04:00 and the finish to Flushing-Main St, as in both of Matthew Ahn's records) and `SHARED_TABLES=1`
+* New solver options: `START_ATOMS` / `END_ATOMS` (comma-separated directed-atom ids). The driver fixes the start to the
+  Rockaways 00:00-04:00 and leaves the finish free. A Flushing finish (both of Ahn's records) is ruled out now: Flushing-bound
+  7s skip 52 St and 69 St, so those stops need a Manhattan-bound ride. and `SHARED_TABLES=1`
   (parallel solvers share one copy of the tables in memory).
 * Research: Ahn 2016 did 469 stations in 21:28:14 with real delays (start Rockaway Park 02:02, finish Flushing). That is
   about this model's best perfect-connection plan, so the main gap is plan quality (search), not delays. Every search so
