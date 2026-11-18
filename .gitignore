@@ -1,0 +1,11 @@
+bin/
+tab/
+data/
+data45/
+data_t/
+gtfs/
+hist/
+old/
+out/
+__pycache__/
+*.bak
