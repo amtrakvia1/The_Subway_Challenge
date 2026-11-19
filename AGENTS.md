@@ -22,6 +22,10 @@ Read `README.md` (the model) and `docs/HANDOFF.md` (everything tried so far and 
   schedule. `beat_record_days` = how many of the 30 days finish under 22:14:10.
 * Best 20 routes: `out/search/top/*.txt`, each with a readable itinerary `*.md` and `*.json` next to the run in
   `out/search/runs/`.
+* Each job also returns up to 16 distinct near-best routes (`rNNNNNN_p_K.txt`); all are scored. Routes the solver
+  rates exactly equal differ by up to ~1 h in median, so this pool is where most robustness gains come from.
+* At the end the top 20 are rescored on 150 simulated days: `out/search/final.csv` (first 30 days are the same as the
+  leaderboard's). Prefer it over the leaderboard when medians are within a few minutes. Takes ~3 min after the deadline.
 * Log: `out/search/log.txt`.
 
 If the environment limits task length, run in chunks (e.g. `./run_search.sh 1` repeatedly); results accumulate.

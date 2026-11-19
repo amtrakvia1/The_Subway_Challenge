@@ -1,0 +1,54 @@
+2026-11-18 17:29:39 seed fl_k4_212.txt on time 23:51 median 25:31
+2026-11-18 17:29:42 seed it4_1.txt on time 21:31 median 25:39
+2026-11-18 17:29:46 seed k4_501.txt on time 22:53 median 23:54
+2026-11-18 17:29:50 seed k4_705.txt on time 22:43 median 23:46
+2026-11-18 17:29:50 search start: 0.1 h, 2 jobs, 120 s per job
+2026-11-18 17:32:23 r022976.txt  [k4 rockaway-start fresh]  on time 23:59  median 25:57  p90 27:20 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 17:32:26 r022977.txt  [s0 free fresh]  on time 22:34  median 26:14  p90 27:04 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 17:34:40 r022979.txt  [s0 rockaway-start elite]  on time 22:25  median 24:02  p90 24:50 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 17:35:03 r022978.txt  [k4 rockaway-start fresh]  on time 23:38  median 24:42  p90 26:07 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 17:35:03 search end. leaderboard: out/search/leaderboard.csv
+2026-11-18 17:35:08 search start: 4.0 h, 2 jobs, 1800 s per job
+2026-11-18 18:06:51 r023309.txt  [k4 rockaway-start fresh]  on time 22:13  median 24:14  p90 25:18 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 18:06:55 r023310.txt  [s0 rockaway-start fresh]  on time 21:47  median 25:45  p90 26:36 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 18:38:39 r023311.txt  [s0 rockaway-start fresh]  on time 21:15  median 25:09  p90 26:17 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 18:38:42 r023312.txt  [s0 rockaway-start fresh]  on time 21:46  median 26:22  p90 27:26 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:08:56 r023314.txt  [k4 rockaway-start elite]  on time 23:04  median 25:13  p90 26:32 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:10:19 r023313.txt  [k4 rockaway-start fresh]  on time 23:04  median 23:56  p90 25:29 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:40:33 r023315.txt  [k4 free fresh]  on time 23:12  median 24:59  p90 25:42 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 19:40:36 r023316.txt  [s0 rockaway-start elite]  on time 21:15  median 25:09  p90 26:17 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:10:50 r023318.txt  [s0 rockaway-start elite]  on time 22:04  median 32:58  p90 33:16 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:12:14 r023317.txt  [s0 free fresh]  on time 21:53  median 25:28  p90 26:34 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:40:58 r023319.txt  [k4 rockaway-start elite]  on time 23:04  median 25:13  p90 26:32 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 20:43:51 r023320.txt  [k4 rockaway-start fresh]  on time 23:30  median 24:26  p90 25:26 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 21:12:35 r023321.txt  [k4 free fresh]  on time 23:23  median 24:49  p90 25:24 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 21:13:58 r023322.txt  [k4 rockaway-start elite]  on time 22:43  median 23:46  p90 25:03 | best so far: median 23:46 (k4_705.txt)
+2026-11-18 21:13:58 search end. leaderboard: out/search/leaderboard.csv
+2026-11-18 22:08:56 search start: 0.1 h, 2 jobs, 120 s per job
+2026-11-18 22:11:12 r039737.txt  [k4 rockaway-start cross]  on time 24:15  median 26:34  p90 33:51 | pool 1 new of 1, best median 25:48 (on time 23:55) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 22:11:39 r039738.txt  [s0 rockaway-start fresh]  on time 22:39  median 24:49  p90 32:31 | pool 1 new of 1, best median 32:19 (on time 22:39) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 22:13:26 r039739.txt  [k4 free elite]  on time 23:03  median 24:10  p90 24:47 | pool 1 new of 1, best median 24:22 (on time 23:23) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 22:14:13 r039740.txt  [k4 free fresh]  on time 23:51  median 25:12  p90 26:10 | pool 1 new of 1, best median 29:50 (on time 23:51) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 22:14:13 final rescore of the top 20 on 150 simulated days
+2026-11-18 22:19:07 search start: 0.0 h, 2 jobs, 1800 s per job
+2026-11-18 22:19:07 final rescore of the top 20 on 150 simulated days
+2026-11-18 22:21:35   final k4_705.txt  on time 22:43  median 23:47  p90 24:45  beat record 1/150
+2026-11-18 22:21:35   final r023322.txt  on time 22:43  median 23:47  p90 24:45  beat record 1/150
+2026-11-18 22:21:35   final r022979.txt  on time 22:25  median 23:52  p90 25:03  beat record 1/150
+2026-11-18 22:21:35   final k4_501.txt  on time 22:53  median 23:53  p90 24:54  beat record 0/150
+2026-11-18 22:21:35   final r039739.txt  on time 23:03  median 23:54  p90 24:47  beat record 0/150
+2026-11-18 22:21:35 search end. leaderboard: out/search/leaderboard.csv
+2026-11-18 22:23:11 search start: 2.0 h, 2 jobs, 1800 s per job
+2026-11-18 22:54:18 r040592.txt  [k4 rockaway-start elite]  on time 23:03  median 24:00  p90 24:47 | pool 16 new of 16, best median 23:54 (on time 23:23) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 22:55:13 r040593.txt  [k4 rockaway-start cross]  on time 23:18  median 24:56  p90 33:07 | pool 15 new of 15, best median 24:49 (on time 23:23) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 23:26:18 r040595.txt  [k4 rockaway-start cross]  on time 23:44  median 25:26  p90 32:32 | pool 16 new of 16, best median 24:56 (on time 23:24) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 23:27:45 r040594.txt  [s0 rockaway-start fresh]  on time 21:34  median 24:57  p90 26:17 | pool 16 new of 16, best median 25:05 (on time 21:34) | best so far: median 23:46 (k4_705.txt)
+2026-11-18 23:58:51 r040596.txt  [s0 rockaway-start fresh]  on time 22:42  median 24:42  p90 25:18 | pool 16 new of 16, best median 26:26 (on time 22:42) | best so far: median 23:46 (k4_705.txt)
+2026-11-19 00:00:18 r040597.txt  [s0 rockaway-start fresh]  on time 21:38  median 26:30  p90 27:43 | pool 16 new of 16, best median 25:50 (on time 21:49) | best so far: median 23:46 (k4_705.txt)
+2026-11-19 00:00:18 final rescore of the top 20 on 150 simulated days
+2026-11-19 00:02:38   final k4_705.txt  on time 22:43  median 23:47  p90 24:45  beat record 1/150
+2026-11-19 00:02:38   final r023322.txt  on time 22:43  median 23:47  p90 24:45  beat record 1/150
+2026-11-19 00:02:38   final r022979.txt  on time 22:25  median 23:52  p90 25:03  beat record 1/150
+2026-11-19 00:02:38   final k4_501.txt  on time 22:53  median 23:53  p90 24:54  beat record 0/150
+2026-11-19 00:02:38   final r039739.txt  on time 23:03  median 23:54  p90 24:47  beat record 0/150
+2026-11-19 00:02:38 search end. leaderboard: out/search/leaderboard.csv

@@ -217,3 +217,28 @@ delays is. Rescore with DATA=data_t for routes built on data_t (datom ids differ
   about this model's best perfect-connection plan, so the main gap is plan quality (search), not delays. Every search so
   far was 5-8 minutes, with 30+ min spread between seeds.
 * `seeds/` holds the best existing routes; the driver scores them first so elite restarts have material.
+
+## 18 Nov evening: 4 h search, then search improvements (results/search-2026-11-18*, 2 cores)
+* 4 h unattended search (14 jobs x 30 min): nothing beat k4_705 (median 23:46); no route beat 22:14:10 on any of 30 days.
+  Elite restarts on the same table returned the same route or a duplicate (r023322 == k4_705). Fastest on-time plan
+  found: r023311, 21:15 (s0), median 25:09.
+* **Key finding: the table objective cannot tell routes apart that the delay model can.** Routes with exactly the same
+  k4 cost (same on-time finish with 2 min margins) differ by up to ~1 h in median (one 15 min job: 23:46 to 24:42 across
+  9 equal-cost routes). The solver used to keep one of them arbitrarily.
+* Changes (solve.cpp: new env options only; travel rules, transfer times and delay model untouched; consistency test passes):
+  - `POOL=<prefix>` (+ `POOL_N`, `POOL_MARGIN`, `POOL_POLISH_SECS`): at the end of each reheat cycle the cycle's state is
+    polished (time-capped) and archived; distinct near-best routes are written to `<prefix>_<i>.txt`. Costs ~10 s per job.
+  - `KICK=<k>` (+ `KICK_MAX`, default 60 ticks): bounded random walk applied to a loaded init route, so elite restarts
+    explore a neighbouring basin. Unbounded kicks were useless (one move can miss a last train: +10 h).
+  - search_driver.py: scores every pool route, skips duplicates, `cross` jobs (k4 anneal from the 5 fastest on-time plans),
+    final rescore of the top 20 on 150 days -> out/search/final.csv. Defaults: --pool 16, --s0-frac 0.15, --cross-frac 0.1.
+* 2 h test with the new driver (6 jobs): no new best (best new r040592, median 23:55 on 150 days). Per job, the best pool
+  route beat the job's main route in all 5 k4 jobs (by 6-30 min) but not reliably in s0 jobs (pools of equal-cost
+  zero-margin routes are fragile in different ways). Cross jobs were poor (24:49, 24:56). On 150 days k4_705 is 23:47,
+  p90 24:45, beats the record on 1 day in 150.
+* Caution: median alone hides fragile tails. A pool route tied k4_705 on median (23:47) but had p90 31:59. Check p90 in
+  final.csv before choosing a route.
+* Next ideas: (1) search the plateau of equal-k4-cost routes directly for the best median (e.g. a driver loop that takes
+  a top route, generates equal-cost neighbours with the solver at low threshold, scores them on 30 days, keeps the best);
+  (2) rank by a tail-aware score (median + 0.25 x (p90 - median)); (3) for choosing an attempt date: build per-date
+  networks from the supplemented GTFS and compare dates by the best route's median.

@@ -1,0 +1,21 @@
+file,config,on_time,median,p10,p90,beat_record_days,days,start,start_station,end_station,runs_mi,median_s,on_time_s
+out/search/runs/k4_705.txt,seed,22:43,23:47,23:03,24:45,1,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.14,85621,81780
+out/search/runs/r023322.txt,k4 rockaway-start elite,22:43,23:47,23:03,24:45,1,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.14,85621,81780
+out/search/runs/r022979.txt,s0 rockaway-start elite,22:25,23:52,23:01,25:03,1,150,4:00,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.42,85928,80700
+out/search/runs/k4_501.txt,seed,22:53,23:53,23:10,24:54,0,150,2:42,Far Rockaway-Mott Av,Middle Village-Metropolitan Av,12.66,85983,82380
+out/search/runs/r039739.txt,k4 free elite,23:03,23:54,23:07,24:47,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,8.8,86050,82980
+out/search/runs/r040592.txt,k4 rockaway-start elite,23:03,23:55,23:06,24:59,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,8.93,86131,82980
+out/search/runs/r040592_p_14.txt,k4 rockaway-start elite pool,23:03,23:58,23:05,24:58,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.01,86286,82980
+out/search/runs/r040592_p_11.txt,k4 rockaway-start elite pool,22:23,24:00,23:12,25:00,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.07,86424,80580
+out/search/runs/r040592_p_2.txt,k4 rockaway-start elite pool,23:03,24:01,23:15,25:01,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.86,86493,82980
+out/search/runs/r023313.txt,k4 rockaway-start fresh,23:04,24:02,23:09,31:59,0,150,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.58,86532,83070
+out/search/runs/r040592_p_15.txt,k4 rockaway-start elite pool,23:03,24:02,23:08,24:57,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.17,86565,82980
+out/search/runs/r040592_p_13.txt,k4 rockaway-start elite pool,23:23,24:04,23:21,25:01,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.87,86644,84180
+out/search/runs/r040592_p_8.txt,k4 rockaway-start elite pool,23:03,24:06,23:10,25:01,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.55,86798,82980
+out/search/runs/r040592_p_1.txt,k4 rockaway-start elite pool,23:23,24:07,23:25,25:01,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.17,86828,84180
+out/search/runs/r040592_p_5.txt,k4 rockaway-start elite pool,23:03,24:07,23:06,25:05,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,11.64,86840,82980
+out/search/runs/r040592_p_0.txt,k4 rockaway-start elite pool,23:23,24:08,23:27,25:03,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,11.48,86939,84180
+out/search/runs/r039739_p_0.txt,k4 free elite pool,23:23,24:09,23:22,25:03,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.82,86962,84180
+out/search/runs/r023309.txt,k4 rockaway-start fresh,22:13,24:13,23:26,24:59,0,150,3:40,Rockaway Park-Beach 116 St,Jamaica-179 St,6.76,87207,79980
+out/search/runs/r040592_p_10.txt,k4 rockaway-start elite pool,23:23,24:19,23:25,25:07,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.25,87586,84180
+out/search/runs/r040592_p_3.txt,k4 rockaway-start elite pool,23:03,24:22,23:31,25:03,0,150,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,8.93,87746,82980

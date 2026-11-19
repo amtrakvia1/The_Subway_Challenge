@@ -278,6 +278,33 @@ int main(int argc, char** argv) {
       t += s.D[((size_t)cur * s.ntgt + s.sI[bo]) * NT + t % NT]; t += s.A[(size_t)bo * NT + t % NT]; cur = s.eI[bo];
     }
   }
+  // KICK=<k>: before annealing a route loaded from a file, take k random local moves (or-opt of up to 8 segments by up to
+  // 15 places, or 2-opt of up to 11), each accepted only if the route stays within KICK_MAX ticks (default 60 = 30 min) of
+  // where it started. A bounded random walk, so a restart from an elite route explores a neighbouring basin instead of
+  // falling straight back into the same optimum (unbounded kicks cost 5-10 h: one move can miss a last train).
+  // The first segment is never moved (keeps a fixed start such as the Rockaways).
+  if (getenv("KICK") && init != "-" && init != "static" && fixP < 0 && loaded) {
+    int K = atoi(getenv("KICK")), done = 0, kmax = getenv("KICK_MAX") ? atoi(getenv("KICK_MAX")) : 60;
+    int bt0; int c0 = s.bestStart(seq, bt0);
+    for (int tries = 0; done < K && tries < 200 * K && NG > 4; tries++) {
+      std::vector<int> c2 = seq, g2 = grp;
+      if (rnd(2)) {
+        int L = 1 + rnd(8); if (L >= NG - 1) continue;
+        int i = 1 + rnd(NG - L), k = std::max(1, std::min(NG - L, i + (rnd(2) ? 1 : -1) * (1 + rnd(15)))); if (k == i) continue;
+        if (rnd(2)) { std::reverse(c2.begin() + i, c2.begin() + i + L); std::reverse(g2.begin() + i, g2.begin() + i + L); for (int j = i; j < i + L; j++) c2[j] = flip(g2[j], c2[j]); }
+        if (k > i) { std::rotate(c2.begin() + i, c2.begin() + i + L, c2.begin() + k + L); std::rotate(g2.begin() + i, g2.begin() + i + L, g2.begin() + k + L); }
+        else { std::rotate(c2.begin() + k, c2.begin() + i, c2.begin() + i + L); std::rotate(g2.begin() + k, g2.begin() + i, g2.begin() + i + L); }
+      } else {
+        int i = 1 + rnd(NG - 1), j = std::min(NG - 1, i + 1 + rnd(10)); if (i == j) continue;
+        std::reverse(c2.begin() + i, c2.begin() + j + 1); std::reverse(g2.begin() + i, g2.begin() + j + 1); for (int x = i; x <= j; x++) c2[x] = flip(g2[x], c2[x]);
+      }
+      if (s.eval(c2, bt0) > c0 + kmax) continue;          // fixed start tick: cheap check
+      seq.swap(c2); grp.swap(g2); done++;
+    }
+    t0 = bt0;
+    fprintf(stderr, "kick: %d random moves within %d ticks applied to the init route (%.1f -> %.1f min)\n", done, kmax,
+            c0 * n.TICK / 60.0, s.eval(seq, t0) * n.TICK / 60.0);
+  }
   int cost = s.eval(seq, t0);
   if (fixP < 0) { int bt; int c = s.bestStart(seq, bt); if (c < cost) { cost = c; t0 = bt; } }
   fprintf(stderr, "seed %u start cost %.1f min\n", seed, cost * n.TICK / 60.0);
@@ -285,12 +312,14 @@ int main(int argc, char** argv) {
 
   // Best-insertion polish: take each block of 1-3 segments out, try it at every position in both directions,
   // keep the best improvement; repeat until a full pass finds nothing. Exhaustive, so it finds moves random search misses.
-  auto polish = [&](std::vector<int>& P, std::vector<int>& Gp, int pt0, int& pc) {
+  auto polish = [&](std::vector<int>& P, std::vector<int>& Gp, int pt0, int& pc, double tmax = 1e9) {
+    auto tp0 = std::chrono::steady_clock::now();
     bool improved = true; int passes = 0;
     std::vector<int> cs, cg;
     while (improved && passes < 6) {
       improved = false; passes++;
       for (int L = 1; L <= 3; L++) for (int i = 0; i + L <= NG; i++) {
+        if ((i & 15) == 0 && std::chrono::duration<double>(std::chrono::steady_clock::now() - tp0).count() > tmax) return;
         std::vector<int> bs(P.begin() + i, P.begin() + i + L), bgp(Gp.begin() + i, Gp.begin() + i + L);
         std::vector<int> rs = bs, rg = bgp; std::reverse(rs.begin(), rs.end()); std::reverse(rg.begin(), rg.end());
         for (int j = 0; j < L; j++) rs[j] = flip(rg[j], rs[j]);
@@ -324,6 +353,30 @@ int main(int argc, char** argv) {
     std::ofstream o(out); o << bestT0 << " " << bestCost << "\n";
     for (int a : bestSeq) o << a << "\n";
   };
+  // POOL=<prefix>: also keep distinct near-best routes. At the end of every reheat cycle the cycle's final state is
+  // polished and archived; at the end the best POOL_N (default 8) within POOL_MARGIN ticks (default 40 = 20 min) of the
+  // best are written to <prefix>_<i>.txt. The table objective (on-time duration with a margin) only loosely predicts the
+  // median under delays, so the driver scores all of them with the delay model and keeps what is actually robust.
+  const char* poolPre = getenv("POOL");
+  const int poolN = getenv("POOL_N") ? atoi(getenv("POOL_N")) : 8, poolM = getenv("POOL_MARGIN") ? atoi(getenv("POOL_MARGIN")) : 40;
+  struct Cand { int cost, t0; std::vector<int> seq; };
+  std::vector<Cand> pool; double poolSecs = 0;
+  const double poolPol = getenv("POOL_POLISH_SECS") ? atof(getenv("POOL_POLISH_SECS")) : 10;   // time cap per candidate
+  auto addPool = [&](std::vector<int> P, std::vector<int> Gp, int pt0, int pc) {
+    if (!poolPre || fixP >= 0) return;
+    auto tp = std::chrono::steady_clock::now();
+    if (pc > bestCost + 3 * poolM) return;                 // far off: not worth polishing
+    if (!getenv("NOPOLISH")) polish(P, Gp, pt0, pc, poolPol);
+    int bt; int c = s.bestStart(P, bt); if (c < pc) { pc = c; pt0 = bt; }
+    poolSecs += std::chrono::duration<double>(std::chrono::steady_clock::now() - tp).count();
+    if (s.endPen(P) || pc >= Solver::BAD) return;
+    if (pc < bestCost) { fprintf(stderr, "  pool polish found a new best %.1f -> %.1f min\n", bestCost * n.TICK / 60.0, pc * n.TICK / 60.0);
+                         bestCost = pc; bestSeq = P; bestGrp = Gp; bestT0 = pt0; }
+    for (auto& q : pool) if (q.seq == P) return;
+    pool.push_back({pc, pt0, P});
+    std::sort(pool.begin(), pool.end(), [](const Cand& a, const Cand& b) { return a.cost < b.cost; });
+    if ((int)pool.size() > 4 * poolN) pool.resize(4 * poolN);
+  };
   auto tStart = std::chrono::steady_clock::now();
   auto elapsed = [&]() { return std::chrono::duration<double>(std::chrono::steady_clock::now() - tStart).count(); };
   std::vector<int> cs(NG), cg(NG), tt(NG), ct(NG), cp(NG), ccp(NG);
@@ -342,6 +395,7 @@ int main(int argc, char** argv) {
       else {
         int k = (int)((e - first) / cyc);
         if (k != cycle) {             // new cycle: polish the best, then restart from it
+          if (cycle >= 0) addPool(seq, grp, t0, cost);
           if (!getenv("NOPOLISH")) { int pc = bestCost; polish(bestSeq, bestGrp, bestT0, pc);
             if (pc < bestCost) { fprintf(stderr, "  polish %.1f -> %.1f min\n", bestCost * n.TICK / 60.0, pc * n.TICK / 60.0); bestCost = pc; } }
           cycle = k; seq = bestSeq; grp = bestGrp; t0 = bestT0; cost = bestCost; s.times(seq, t0, tt, cp);
@@ -401,6 +455,18 @@ int main(int argc, char** argv) {
   if (!getenv("NOPOLISH")) { int pc = bestCost; polish(bestSeq, bestGrp, bestT0, pc); bestCost = pc; }
   if (fixP < 0) { int bt; int c = s.bestStart(bestSeq, bt); if (c <= bestCost) { bestCost = c; bestT0 = bt; } }
   save();
+  if (poolPre && fixP < 0) {
+    addPool(seq, grp, t0, cost);
+    int w = 0;
+    for (auto& q : pool) {
+      if (w >= poolN || q.cost > bestCost + poolM) break;
+      if (q.seq == bestSeq) continue;
+      std::ofstream o(std::string(poolPre) + "_" + std::to_string(w++) + ".txt"); o << q.t0 << " " << q.cost << "\n";
+      for (int a : q.seq) o << a << "\n";
+    }
+    fprintf(stderr, "pool: %zu distinct cycle results, %d written (within %d ticks of best), %.0f s spent polishing them\n",
+            pool.size(), w, poolM, poolSecs);
+  }
   fprintf(stderr, "seed %u final best %.1f min = %.3f h, start tick %d (%02d:%02d), iters %ldk acc %.1f%%\n", seed, bestCost * n.TICK / 60.0,
           bestCost * n.TICK / 3600.0, bestT0, bestT0 * n.TICK / 3600, bestT0 * n.TICK % 3600 / 60, it / 1000, 100.0 * acc / it);
   return 0;

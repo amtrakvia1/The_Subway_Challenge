@@ -1,0 +1,132 @@
+file,config,on_time,median,p10,p90,beat_record_days,days,start,start_station,end_station,runs_mi,median_s,on_time_s
+out/search/runs/fl_k4_212.txt,seed,23:51,25:31,24:31,26:23,0,30,3:40,Rockaway Park-Beach 116 St,Flushing-Main St,11.17,91887,85860
+out/search/runs/it4_1.txt,seed,21:31,25:39,24:28,27:01,0,30,4:51,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,9.9,92343,77490
+out/search/runs/k4_501.txt,seed,22:53,23:54,23:10,24:17,0,30,2:42,Far Rockaway-Mott Av,Middle Village-Metropolitan Av,12.66,86065,82380
+out/search/runs/k4_705.txt,seed,22:43,23:46,23:08,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.14,85610,81780
+out/search/runs/r022976.txt,k4 rockaway-start fresh,23:59,25:57,24:51,27:20,0,30,0:22,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,12.43,93463,86370
+out/search/runs/r022977.txt,s0 free fresh,22:34,26:14,25:37,27:04,0,30,7:03,Far Rockaway-Mott Av,Bay Ridge-95 St,9.66,94456,81270
+out/search/runs/r022979.txt,s0 rockaway-start elite,22:25,24:02,23:02,24:50,0,30,4:00,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.42,86535,80700
+out/search/runs/r022978.txt,k4 rockaway-start fresh,23:38,24:42,23:57,26:07,0,30,0:22,Far Rockaway-Mott Av,Pelham Bay Park,11.1,88978,85110
+out/search/runs/r023309.txt,k4 rockaway-start fresh,22:13,24:14,23:28,25:18,0,30,3:40,Rockaway Park-Beach 116 St,Jamaica-179 St,6.76,87264,79980
+out/search/runs/r023310.txt,s0 rockaway-start fresh,21:47,25:45,24:52,26:36,0,30,3:02,Far Rockaway-Mott Av,Bay Ridge-95 St,9.85,92740,78450
+out/search/runs/r023311.txt,s0 rockaway-start fresh,21:15,25:09,24:53,26:17,0,30,0:02,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,7.69,90564,76530
+out/search/runs/r023312.txt,s0 rockaway-start fresh,21:46,26:22,25:45,27:26,0,30,0:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.28,94946,78390
+out/search/runs/r023314.txt,k4 rockaway-start elite,23:04,25:13,24:25,26:32,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,10.62,90811,83070
+out/search/runs/r023313.txt,k4 rockaway-start fresh,23:04,23:56,23:25,25:29,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.58,86172,83070
+out/search/runs/r023315.txt,k4 free fresh,23:12,24:59,23:52,25:42,0,30,5:12,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,11.41,89950,83550
+out/search/runs/r023316.txt,s0 rockaway-start elite,21:15,25:09,24:53,26:17,0,30,0:02,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,7.69,90564,76530
+out/search/runs/r023318.txt,s0 rockaway-start elite,22:04,32:58,25:25,33:16,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.26,118723,79470
+out/search/runs/r023317.txt,s0 free fresh,21:53,25:28,24:39,26:34,0,30,21:20,Far Rockaway-Mott Av,Pelham Bay Park,8.17,91695,78780
+out/search/runs/r023319.txt,k4 rockaway-start elite,23:04,25:13,24:25,26:32,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,10.62,90811,83070
+out/search/runs/r023320.txt,k4 rockaway-start fresh,23:30,24:26,24:02,25:26,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,9.43,87997,84600
+out/search/runs/r023321.txt,k4 free fresh,23:23,24:49,23:55,25:24,0,30,10:29,Far Rockaway-Mott Av,Pelham Bay Park,10.8,89365,84210
+out/search/runs/r023322.txt,k4 rockaway-start elite,22:43,23:46,23:08,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.14,85610,81780
+out/search/runs/r039737.txt,k4 rockaway-start cross,24:15,26:34,24:57,33:51,0,30,3:40,Rockaway Park-Beach 116 St,DeKalb Av,11.88,95683,87300
+out/search/runs/r039737_p_0.txt,k4 rockaway-start cross pool,23:55,25:48,24:54,27:09,0,30,3:40,Rockaway Park-Beach 116 St,DeKalb Av,13.65,92892,86100
+out/search/runs/r039738.txt,s0 rockaway-start fresh,22:39,24:49,24:06,32:31,0,30,1:42,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.14,89374,81570
+out/search/runs/r039738_p_0.txt,s0 rockaway-start fresh pool,22:39,32:19,31:59,32:45,0,30,1:42,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.19,116361,81570
+out/search/runs/r039739.txt,k4 free elite,23:03,24:10,23:14,24:47,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,8.8,87027,82980
+out/search/runs/r039739_p_0.txt,k4 free elite pool,23:23,24:22,23:25,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.82,87730,84180
+out/search/runs/r039740.txt,k4 free fresh,23:51,25:12,24:43,26:10,0,30,6:48,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,7.77,90726,85890
+out/search/runs/r039740_p_0.txt,k4 free fresh pool,23:51,29:50,24:52,30:18,0,30,6:48,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,8.29,107425,85890
+out/search/runs/r040592.txt,k4 rockaway-start elite,23:03,24:00,23:06,24:47,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,8.93,86458,82980
+out/search/runs/r040592_p_0.txt,k4 rockaway-start elite pool,23:23,24:23,23:28,25:08,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,11.48,87814,84180
+out/search/runs/r040592_p_1.txt,k4 rockaway-start elite pool,23:23,24:23,23:33,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.17,87788,84180
+out/search/runs/r040592_p_10.txt,k4 rockaway-start elite pool,23:23,24:18,23:33,25:09,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.25,87513,84180
+out/search/runs/r040592_p_11.txt,k4 rockaway-start elite pool,22:23,23:58,23:21,25:04,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.07,86323,80580
+out/search/runs/r040592_p_12.txt,k4 rockaway-start elite pool,23:03,24:25,23:30,25:12,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.19,87937,82980
+out/search/runs/r040592_p_13.txt,k4 rockaway-start elite pool,23:23,23:54,23:22,25:01,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.87,86057,84180
+out/search/runs/r040592_p_14.txt,k4 rockaway-start elite pool,23:03,24:02,23:22,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.01,86549,82980
+out/search/runs/r040592_p_15.txt,k4 rockaway-start elite pool,23:03,23:57,23:01,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.17,86220,82980
+out/search/runs/r040592_p_2.txt,k4 rockaway-start elite pool,23:03,24:16,23:19,25:04,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.86,87418,82980
+out/search/runs/r040592_p_3.txt,k4 rockaway-start elite pool,23:03,24:08,23:31,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,8.93,86931,82980
+out/search/runs/r040592_p_4.txt,k4 rockaway-start elite pool,23:03,24:25,23:25,25:25,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,11.3,87952,82980
+out/search/runs/r040592_p_5.txt,k4 rockaway-start elite pool,23:03,24:07,23:15,25:05,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,11.64,86848,82980
+out/search/runs/r040592_p_6.txt,k4 rockaway-start elite pool,23:03,24:26,23:26,25:05,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.22,87964,82980
+out/search/runs/r040592_p_7.txt,k4 rockaway-start elite pool,22:43,24:25,23:21,25:03,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,9.07,87912,81780
+out/search/runs/r040592_p_8.txt,k4 rockaway-start elite pool,23:03,24:02,23:22,25:01,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.55,86559,82980
+out/search/runs/r040592_p_9.txt,k4 rockaway-start elite pool,23:03,24:26,23:40,25:18,0,30,3:02,Far Rockaway-Mott Av,Astoria-Ditmars Blvd,10.38,87979,82980
+out/search/runs/r040593.txt,k4 rockaway-start cross,23:18,24:56,24:13,33:07,0,30,3:02,Far Rockaway-Mott Av,Prince St,11.41,89760,83880
+out/search/runs/r040593_p_0.txt,k4 rockaway-start cross pool,23:18,24:51,24:02,33:11,0,30,3:02,Far Rockaway-Mott Av,Prince St,12.33,89510,83880
+out/search/runs/r040593_p_1.txt,k4 rockaway-start cross pool,23:18,32:34,24:40,33:12,0,30,3:02,Far Rockaway-Mott Av,Prince St,10.5,117265,83880
+out/search/runs/r040593_p_10.txt,k4 rockaway-start cross pool,23:23,25:06,24:08,33:05,0,30,3:02,Far Rockaway-Mott Av,Cortlandt St,11.73,90415,84210
+out/search/runs/r040593_p_11.txt,k4 rockaway-start cross pool,23:23,24:49,24:07,32:38,0,30,3:02,Far Rockaway-Mott Av,Cortlandt St,14.64,89366,84210
+out/search/runs/r040593_p_12.txt,k4 rockaway-start cross pool,23:26,26:09,24:38,33:13,0,30,3:02,Far Rockaway-Mott Av,Canal St,12.83,94140,84390
+out/search/runs/r040593_p_13.txt,k4 rockaway-start cross pool,23:27,25:33,24:43,33:20,0,30,3:02,Far Rockaway-Mott Av,Whitehall St-South Ferry,10.36,92035,84420
+out/search/runs/r040593_p_14.txt,k4 rockaway-start cross pool,23:34,26:05,24:45,33:35,0,30,3:02,Far Rockaway-Mott Av,Rector St,10.12,93906,84840
+out/search/runs/r040593_p_2.txt,k4 rockaway-start cross pool,23:18,25:17,24:28,33:10,0,30,3:02,Far Rockaway-Mott Av,Prince St,10.74,91039,83880
+out/search/runs/r040593_p_3.txt,k4 rockaway-start cross pool,23:18,32:38,24:35,33:11,0,30,3:02,Far Rockaway-Mott Av,Prince St,13.1,117488,83880
+out/search/runs/r040593_p_4.txt,k4 rockaway-start cross pool,23:18,24:58,24:21,33:10,0,30,3:02,Far Rockaway-Mott Av,Prince St,12.12,89892,83880
+out/search/runs/r040593_p_5.txt,k4 rockaway-start cross pool,23:18,24:56,24:00,33:07,0,30,3:02,Far Rockaway-Mott Av,Prince St,10.19,89792,83880
+out/search/runs/r040593_p_6.txt,k4 rockaway-start cross pool,23:18,32:29,24:40,33:10,0,30,3:02,Far Rockaway-Mott Av,Prince St,11.61,116977,83880
+out/search/runs/r040593_p_7.txt,k4 rockaway-start cross pool,23:18,25:59,24:35,33:10,0,30,3:02,Far Rockaway-Mott Av,Prince St,12.63,93592,83880
+out/search/runs/r040593_p_8.txt,k4 rockaway-start cross pool,23:18,29:09,24:28,33:10,0,30,3:02,Far Rockaway-Mott Av,Prince St,10.72,104961,83880
+out/search/runs/r040593_p_9.txt,k4 rockaway-start cross pool,23:23,25:15,24:30,33:06,0,30,3:02,Far Rockaway-Mott Av,Cortlandt St,11.3,90936,84210
+out/search/runs/r040595.txt,k4 rockaway-start cross,23:44,25:26,24:40,32:32,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.9,91575,85470
+out/search/runs/r040595_p_0.txt,k4 rockaway-start cross pool,23:44,25:20,24:25,33:04,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.09,91222,85470
+out/search/runs/r040595_p_1.txt,k4 rockaway-start cross pool,23:24,25:10,24:25,26:21,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.05,90618,84270
+out/search/runs/r040595_p_10.txt,k4 rockaway-start cross pool,23:24,25:15,24:41,32:45,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.04,90931,84270
+out/search/runs/r040595_p_11.txt,k4 rockaway-start cross pool,23:24,25:25,24:33,32:57,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.43,91514,84270
+out/search/runs/r040595_p_12.txt,k4 rockaway-start cross pool,23:24,25:01,24:39,26:02,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,8.92,90094,84270
+out/search/runs/r040595_p_13.txt,k4 rockaway-start cross pool,23:44,25:26,24:44,33:17,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.47,91587,85470
+out/search/runs/r040595_p_14.txt,k4 rockaway-start cross pool,24:04,25:45,25:02,33:02,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,9.38,92730,86670
+out/search/runs/r040595_p_15.txt,k4 rockaway-start cross pool,24:04,25:44,24:44,33:28,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.25,92684,86670
+out/search/runs/r040595_p_2.txt,k4 rockaway-start cross pool,23:44,25:54,24:40,33:14,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.61,93291,85470
+out/search/runs/r040595_p_3.txt,k4 rockaway-start cross pool,23:24,24:56,24:20,27:03,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,9.95,89778,84270
+out/search/runs/r040595_p_4.txt,k4 rockaway-start cross pool,23:44,25:27,24:43,32:45,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.11,91657,85470
+out/search/runs/r040595_p_5.txt,k4 rockaway-start cross pool,23:24,25:03,24:22,32:48,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.0,90206,84270
+out/search/runs/r040595_p_6.txt,k4 rockaway-start cross pool,23:24,25:24,24:41,32:25,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,11.92,91473,84270
+out/search/runs/r040595_p_7.txt,k4 rockaway-start cross pool,23:44,25:26,24:49,32:53,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.1,91597,85470
+out/search/runs/r040595_p_8.txt,k4 rockaway-start cross pool,23:24,25:23,24:23,33:14,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.8,91436,84270
+out/search/runs/r040595_p_9.txt,k4 rockaway-start cross pool,23:44,25:02,24:28,26:57,0,30,3:40,Rockaway Park-Beach 116 St,Astoria-Ditmars Blvd,10.09,90172,85470
+out/search/runs/r040594.txt,s0 rockaway-start fresh,21:34,24:57,24:27,26:17,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.87,89869,77670
+out/search/runs/r040594_p_0.txt,s0 rockaway-start fresh pool,21:34,25:24,24:28,26:20,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.21,91499,77670
+out/search/runs/r040594_p_1.txt,s0 rockaway-start fresh pool,21:34,25:55,24:42,26:54,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,8.89,93311,77670
+out/search/runs/r040594_p_10.txt,s0 rockaway-start fresh pool,21:34,25:15,24:01,25:58,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,8.89,90943,77670
+out/search/runs/r040594_p_11.txt,s0 rockaway-start fresh pool,21:34,25:17,23:54,26:20,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.31,91052,77670
+out/search/runs/r040594_p_12.txt,s0 rockaway-start fresh pool,21:34,25:35,24:34,26:46,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.66,92128,77670
+out/search/runs/r040594_p_13.txt,s0 rockaway-start fresh pool,21:34,25:05,23:56,26:19,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.69,90315,77670
+out/search/runs/r040594_p_14.txt,s0 rockaway-start fresh pool,21:34,25:36,24:32,26:19,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,8.75,92166,77670
+out/search/runs/r040594_p_15.txt,s0 rockaway-start fresh pool,21:34,25:14,23:54,26:31,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.28,90869,77670
+out/search/runs/r040594_p_2.txt,s0 rockaway-start fresh pool,21:34,25:36,24:33,26:40,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,8.9,92174,77670
+out/search/runs/r040594_p_3.txt,s0 rockaway-start fresh pool,21:34,25:13,24:01,25:59,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.43,90807,77670
+out/search/runs/r040594_p_4.txt,s0 rockaway-start fresh pool,21:34,25:15,24:21,26:18,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.15,90943,77670
+out/search/runs/r040594_p_5.txt,s0 rockaway-start fresh pool,21:34,25:36,24:35,26:38,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.37,92215,77670
+out/search/runs/r040594_p_6.txt,s0 rockaway-start fresh pool,21:34,25:22,24:28,26:33,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.73,91358,77670
+out/search/runs/r040594_p_7.txt,s0 rockaway-start fresh pool,21:34,25:31,24:34,26:37,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,8.68,91862,77670
+out/search/runs/r040594_p_8.txt,s0 rockaway-start fresh pool,21:34,25:13,23:53,26:11,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.3,90810,77670
+out/search/runs/r040594_p_9.txt,s0 rockaway-start fresh pool,21:34,25:13,23:53,26:11,0,30,3:40,Rockaway Park-Beach 116 St,Middle Village-Metropolitan Av,9.15,90810,77670
+out/search/runs/r040596.txt,s0 rockaway-start fresh,22:42,24:42,23:58,25:18,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,11.6,88933,81750
+out/search/runs/r040596_p_0.txt,s0 rockaway-start fresh pool,22:42,27:04,26:22,27:45,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,12.29,97473,81750
+out/search/runs/r040596_p_1.txt,s0 rockaway-start fresh pool,22:42,26:46,26:20,27:29,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,12.39,96372,81750
+out/search/runs/r040596_p_10.txt,s0 rockaway-start fresh pool,22:42,27:20,26:16,27:46,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,12.17,98403,81750
+out/search/runs/r040596_p_11.txt,s0 rockaway-start fresh pool,22:42,27:27,26:38,28:11,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,13.09,98838,81750
+out/search/runs/r040596_p_12.txt,s0 rockaway-start fresh pool,22:42,28:03,27:26,28:46,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,12.33,101015,81750
+out/search/runs/r040596_p_13.txt,s0 rockaway-start fresh pool,22:42,27:14,26:24,28:03,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,12.45,98057,81750
+out/search/runs/r040596_p_14.txt,s0 rockaway-start fresh pool,22:42,27:08,26:40,27:44,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,11.7,97696,81750
+out/search/runs/r040596_p_15.txt,s0 rockaway-start fresh pool,22:42,26:36,25:04,27:24,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,10.67,95793,81750
+out/search/runs/r040596_p_2.txt,s0 rockaway-start fresh pool,22:42,27:44,26:42,28:28,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,14.34,99887,81750
+out/search/runs/r040596_p_3.txt,s0 rockaway-start fresh pool,22:42,27:02,26:04,27:41,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,11.14,97356,81750
+out/search/runs/r040596_p_4.txt,s0 rockaway-start fresh pool,22:42,27:23,26:39,27:45,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,12.62,98608,81750
+out/search/runs/r040596_p_5.txt,s0 rockaway-start fresh pool,22:42,27:44,27:16,28:11,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,11.4,99851,81750
+out/search/runs/r040596_p_6.txt,s0 rockaway-start fresh pool,22:42,27:05,26:07,27:45,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,14.26,97545,81750
+out/search/runs/r040596_p_7.txt,s0 rockaway-start fresh pool,22:42,26:26,26:00,27:26,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,11.81,95198,81750
+out/search/runs/r040596_p_8.txt,s0 rockaway-start fresh pool,22:42,32:00,26:26,32:35,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,10.66,115246,81750
+out/search/runs/r040596_p_9.txt,s0 rockaway-start fresh pool,22:42,27:09,26:25,28:04,0,30,4:00,Far Rockaway-Mott Av,Rockaway Park-Beach 116 St,12.43,97751,81750
+out/search/runs/r040597.txt,s0 rockaway-start fresh,21:38,26:30,25:27,27:43,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,12.16,95403,77880
+out/search/runs/r040597_p_0.txt,s0 rockaway-start fresh pool,21:38,26:32,25:10,28:01,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,12.24,95535,77880
+out/search/runs/r040597_p_1.txt,s0 rockaway-start fresh pool,21:38,25:51,24:52,27:32,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,10.45,93094,77880
+out/search/runs/r040597_p_10.txt,s0 rockaway-start fresh pool,21:49,26:45,25:09,28:01,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,11.49,96327,78540
+out/search/runs/r040597_p_11.txt,s0 rockaway-start fresh pool,21:49,27:29,26:13,28:16,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,10.2,98982,78540
+out/search/runs/r040597_p_12.txt,s0 rockaway-start fresh pool,21:49,31:53,25:47,32:07,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,10.18,114782,78540
+out/search/runs/r040597_p_13.txt,s0 rockaway-start fresh pool,21:49,25:50,24:50,27:48,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,10.72,93039,78540
+out/search/runs/r040597_p_14.txt,s0 rockaway-start fresh pool,21:49,27:30,25:50,28:29,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,11.03,99016,78540
+out/search/runs/r040597_p_15.txt,s0 rockaway-start fresh pool,21:49,27:21,25:25,27:54,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,9.7,98494,78540
+out/search/runs/r040597_p_2.txt,s0 rockaway-start fresh pool,21:38,25:53,24:58,27:22,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,8.9,93236,77880
+out/search/runs/r040597_p_3.txt,s0 rockaway-start fresh pool,21:38,27:09,25:33,28:17,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,11.58,97741,77880
+out/search/runs/r040597_p_4.txt,s0 rockaway-start fresh pool,21:38,26:29,25:30,27:33,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,13.31,95358,77880
+out/search/runs/r040597_p_5.txt,s0 rockaway-start fresh pool,21:38,26:11,25:03,27:31,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,11.51,94286,77880
+out/search/runs/r040597_p_6.txt,s0 rockaway-start fresh pool,21:38,26:13,24:50,27:10,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,12.3,94439,77880
+out/search/runs/r040597_p_7.txt,s0 rockaway-start fresh pool,21:38,26:59,26:06,27:50,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,11.45,97196,77880
+out/search/runs/r040597_p_8.txt,s0 rockaway-start fresh pool,21:40,26:30,25:07,27:36,0,30,0:20,Rockaway Park-Beach 116 St,Flatbush Av-Brooklyn College,10.62,95442,78000
+out/search/runs/r040597_p_9.txt,s0 rockaway-start fresh pool,21:49,27:03,25:30,27:52,0,30,0:22,Far Rockaway-Mott Av,Flatbush Av-Brooklyn College,11.85,97410,78540
