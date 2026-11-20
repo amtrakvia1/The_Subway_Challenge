@@ -242,3 +242,24 @@ delays is. Rescore with DATA=data_t for routes built on data_t (datom ids differ
   a top route, generates equal-cost neighbours with the solver at low threshold, scores them on 30 days, keeps the best);
   (2) rank by a tail-aware score (median + 0.25 x (p90 - median)); (3) for choosing an attempt date: build per-date
   networks from the supplemented GTFS and compare dates by the best route's median.
+
+## 20 Nov: plateau search (src/plateau.py, results/plateau-2026-11-20)
+* New `bin/sim ... mcbatch`: many routes on the same simulated days, each day perturbed once (~9x faster per route than
+  `mc`, identical output per route; checked).
+* plateau.py: 2 walkers start from the top 4 routes of out/search/final.csv. Each step: 90 s solver walk on tab/k4 from
+  the current route with a 6-tick threshold and 4 s cycles (NOPOLISH=1, POOL=..., ~17 new variants), score all on 60
+  training days (seed 7), move to the best only if it also wins on 60 confirmation days (seed 13). Score = median +
+  0.25 x (p90 - median). Final check on 150 held-out days (seed 99).
+* Confirmation matters: most training-day "wins" (5-20 min) reversed on confirmation days. 2 h: 126 steps, 2100 routes,
+  13 accepted moves.
+* Result. Held-out (seed 99, 150 days): best new p157403_v_1 median 23:43 / p90 24:27 vs k4_705 23:59 / 24:43 and
+  k4_501 23:52 / 24:53. Independent recheck (seed 1234, 300 days): p157403_v_1 23:43 / 24:31 vs k4_705 23:45 / 24:41;
+  paired by day: same finish (within 1 min) on 55% of days, faster on 30%, slower on 15%, mean gain 7 min.
+  So a real but small gain vs k4_705, mostly in the tail; vs k4_501 mean gain 16 min (faster on 59% of days).
+  Its on-time plan is 23:03 (k4_705: 22:43): slower on paper, more robust. Consistency test passes.
+  p157403_v_1 and p157442_v_2 are now in seeds/.
+* Note on noise: medians of the same route on two different 150-day sets differed by up to 14 min (k4_705: 23:59 vs
+  23:45). Compare routes paired on the same days, not across files with different seeds.
+* Conclusion: the robust ceiling of this model is about 23:40 median, ~1.5 h off the record. Better search at the same
+  model is giving minutes, not hours. The next big questions are model-level: is the delay model / fixed-order rider
+  too pessimistic (validate against a real attempt log), and how much a good attempt date saves (planned work).

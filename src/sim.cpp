@@ -5,6 +5,7 @@
 //   sim <data_dir> <solution_file> miss  [slack_sec]                 -> per boarded train: minutes lost if that train is missed
 //   sim <data_dir> <solution_file> mc <samples> <seed> [scale]       -> finish durations (sec) under random delays
 //   sim <data_dir> <solution_file> dur   [slack_sec]                 -> just the duration in seconds
+//   sim <data_dir> <list_file> mcbatch <samples> <seed> [scale]      -> mc for many routes on the same days (one column each)
 //   sim <data_dir> <solution_file> replan <pos> <platform> <now_sec> <window> <iters> [seed]
 //        -> you are at <platform> at <now_sec> about to start atom number <pos> (0-based): try reordering the next
 //           <window> atoms (local search, <iters> evaluations) and print the best order found (used by live.py)
@@ -247,7 +248,7 @@ static TT perturb(const TT& base, std::mt19937& rng, double scale) {
 int main(int argc, char** argv) {
   if (argc < 4) { fprintf(stderr, "usage: see header of sim.cpp\n"); return 1; }
   Sim s; s.n = loadNet(argv[1]);
-  std::ifstream in(argv[2]); int t0tick, c; in >> t0tick >> c; std::vector<int> seq; int x; while (in >> x) seq.push_back(x);
+  std::ifstream in(argv[2]); int t0tick = 0, c = 0; in >> t0tick >> c; std::vector<int> seq; int x; while (in >> x) seq.push_back(x);
   std::string mode = argv[3];
   const int TICK = s.n.TICK;
   auto setSlack = [&](int sl) { s.slack = sl; s.beta = s.n.XPLAT * TICK + sl; s.same = s.n.XSAME * TICK + sl; };
@@ -321,6 +322,30 @@ int main(int argc, char** argv) {
       std::vector<Leg> lg; std::vector<int> la2;
       int end = s.run(seq, t0 - 600, &lg, &la2);
       printf("%d\n", end >= INF || lg.empty() ? -1 : end - lg[0].t0); fflush(stdout);
+    }
+    return 0;
+  }
+  if (mode == "mcbatch") {    // sim <data> <list_file> mcbatch <samples> <seed> [scale]: like mc, for every route listed
+    // (one solution file per line) on the SAME simulated days, perturbing each day once. Prints one row per day,
+    // one column per route; per route identical to `mc` with the same samples/seed/scale.
+    int N = atoi(argv[4]); unsigned seed = atoi(argv[5]); double scale = argc > 6 ? atof(argv[6]) : 1.0;
+    std::vector<std::vector<int>> seqs; std::vector<int> starts;
+    { std::ifstream L(argv[2]); std::string f;
+      while (std::getline(L, f)) { if (f.empty()) continue; std::ifstream r(f); int a, b; std::vector<int> q; int y;
+        if (!(r >> a >> b)) { fprintf(stderr, "bad route file %s\n", f.c_str()); return 1; }
+        while (r >> y) q.push_back(y); seqs.push_back(q); starts.push_back(a * TICK); } }
+    setSlack(0);
+    std::mt19937 rng(seed); std::normal_distribution<double> Nd(0, 1);
+    for (int i = 0; i < N; i++) {
+      s.tt = perturb(base, rng, scale);
+      double wm = std::exp(0.06 * Nd(rng) * scale);
+      for (size_t k = 0; k < seqs.size(); k++) {
+        s.init(); s.walkMul = wm;
+        std::vector<Leg> lg; std::vector<int> la2;
+        int end = s.run(seqs[k], starts[k] - 600, &lg, &la2);
+        printf(k ? "\t%d" : "%d", end >= INF || lg.empty() ? -1 : end - lg[0].t0);
+      }
+      printf("\n"); fflush(stdout);
     }
     return 0;
   }

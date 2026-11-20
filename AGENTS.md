@@ -30,6 +30,17 @@ Read `README.md` (the model) and `docs/HANDOFF.md` (everything tried so far and 
 
 If the environment limits task length, run in chunks (e.g. `./run_search.sh 1` repeatedly); results accumulate.
 
+## Second job: plateau search (improve the top routes on the delay model directly)
+
+    python3 src/plateau.py --hours 2      # needs out/search/final.csv from a long search
+
+* Starts from the best 4 routes of `out/search/final.csv`. Each step asks the solver for ~17 variants the k4 tables rate
+  (nearly) equal, scores them on 60 training days and moves to the best one only if it also wins on 60 independent
+  confirmation days. Score = median + 0.25 x (p90 - median).
+* Results: `out/plateau/final.csv` = the best routes and the start routes on 150 held-out days (a third seed). Judge by
+  that file, not by training scores: picking the best of many routes on the same days picks lucky ones.
+* Itineraries: `out/plateau/runs/<file>.md`.
+
 ## What to report back
 
 The first 10 lines of `out/search/leaderboard.csv`, the best route's itinerary (`out/search/runs/<file>.md`),
