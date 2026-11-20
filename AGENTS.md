@@ -41,6 +41,15 @@ If the environment limits task length, run in chunks (e.g. `./run_search.sh 1` r
   that file, not by training scores: picking the best of many routes on the same days picks lucky ones.
 * Itineraries: `out/plateau/runs/<file>.md`.
 
+## Third job: choose an attempt date (planned work)
+
+    curl -o supp.zip https://rrgtfsfeeds.s3.amazonaws.com/gtfs_supplemented.zip && unzip -oq supp.zip -d supp
+    python3 src/compare_dates.py supp 20261124 20261125 ...   # ~16 min per date on 2 cores
+    python3 src/date_work.py gtfs dates 20261124 ...          # what planned work each date has
+
+* `out/dates/summary.csv`: per date, whether it is possible at all, the best existing route ridden as planned, and the
+  best after a short re-anneal on that date's timetable. The feed covers about one week ahead: run it in the attempt week.
+
 ## What to report back
 
 The first 10 lines of `out/search/leaderboard.csv`, the best route's itinerary (`out/search/runs/<file>.md`),

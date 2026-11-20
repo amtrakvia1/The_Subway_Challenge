@@ -169,7 +169,8 @@ int main(int argc, char** argv) {
   if (fixP >= 0) { s.fixSrc = n.srcIdx[fixP]; if (s.fixSrc < 0) { fprintf(stderr, "start platform is not the end of any atom\n"); return 1; } }
   // Drop options that only have part-time service (e.g. a hop that exists only on a few rush-hour trains): a route that
   // needs one of those is one delay away from waiting until tomorrow. Keep them only if the group has nothing else.
-  { int dropped = 0;
+  // KEEP_PARTTIME=1 keeps them (dated networks with planned work: a route may need a line that is suspended for hours).
+  if (!getenv("KEEP_PARTTIME")) { int dropped = 0;
     for (auto& g : n.group) {
       std::vector<int> keep;
       for (int o : g) { int mx = 0; for (int t = 0; t < NT; t++) mx = std::max<int>(mx, s.A[(size_t)o * NT + t]); if (mx <= 180) keep.push_back(o); }

@@ -1,0 +1,9 @@
+date,day,best_fixed,fixed_on_time,fixed_median,fixed_p90,best_tuned,tuned_on_time,tuned_median,tuned_p90,tuned_beat_days,days,tuned_score_s,fixed_score_s
+regular,weekday,pl_157442_v_2.txt,23:03,23:34,24:45,pl_157442_v_2.txt,23:03,23:34,24:45,0,60,85945,85945
+20261121,Sat,not possible: no trains at Bowery; Broad St; Canal St; Chambers St; Delancey St-Essex St; Flushing Av; Fulton St; Hewes St; Lorimer St; Marcy Av; Myrtle Av,,,,,,,,,,,
+20261122,Sun,not possible: no trains at Bowery; Broad St; Canal St; Chambers St; Delancey St-Essex St; Flushing Av; Fulton St; Hewes St; Lorimer St; Marcy Av; Myrtle Av,,,,,,,,,,,
+20261123,Mon,fl_k4_212.txt,26:42,26:06,26:39,t500001_p_0.txt,23:51,25:10,25:59,0,60,91341,94471
+20261124,Tue,k4_501.txt,23:33,24:37,30:44,t500004_p_2.txt,23:40,25:12,26:18,0,60,91759,94145
+20261125,Wed,pl_157442_v_2.txt,24:00,24:40,29:12,t500006_p_3.txt,23:09,23:50,28:40,1,60,90168,92911
+20261126,Thu,pl_157403_v_1.txt,38:48,40:27,41:14,t500007_p_4.txt,24:25,26:01,43:45,0,60,109663,146337
+20261127,Fri,pl_157403_v_1.txt,23:03,23:48,24:45,t500010_p_5.txt,23:24,24:04,24:46,0,60,87277,86556

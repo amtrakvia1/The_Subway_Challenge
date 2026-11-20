@@ -1,0 +1,65 @@
+2026-11-20 15:56:22 compare dates 20261121 20261122 20261123 20261124 20261125 20261126 20261127: 900 s x 2 tuning jobs per date, 60 simulated days, routes from seeds/: fl_k4_212.txt it4_1.txt k4_501.txt k4_705.txt pl_157403_v_1.txt pl_157442_v_2.txt
+2026-11-20 15:56:28 regular weekday | fixed: best pl_157442_v_2.txt on time 23:03 median 23:34 p90 24:45 | tuned: best pl_157442_v_2.txt on time 23:03 median 23:34 p90 24:45, beat record 0/60
+2026-11-20 15:56:43 20261121: tables built in 15 s
+2026-11-20 15:56:43 20261121 Sat: NOT POSSIBLE - no train serves Bowery, Broad St, Canal St, Chambers St, Delancey St-Essex St, Flushing Av, Fulton St, Hewes St, Lorimer St, Marcy Av, Myrtle Av all day (planned work)
+2026-11-20 15:56:57 20261122: tables built in 14 s
+2026-11-20 15:56:57 20261122 Sun: NOT POSSIBLE - no train serves Bowery, Broad St, Canal St, Chambers St, Delancey St-Essex St, Flushing Av, Fulton St, Hewes St, Lorimer St, Marcy Av, Myrtle Av all day (planned work)
+2026-11-20 15:57:12 20261123: tables built in 15 s
+2026-11-20 15:57:12   fl_k4_212.txt: 2 segment(s) without trains replaced
+2026-11-20 15:57:12   it4_1.txt: 2 segment(s) without trains replaced
+2026-11-20 15:57:12   k4_501.txt: 2 segment(s) without trains replaced
+2026-11-20 15:57:12   k4_705.txt: 2 segment(s) without trains replaced
+2026-11-20 15:57:12   pl_157403_v_1.txt: 2 segment(s) without trains replaced
+2026-11-20 15:57:12   pl_157442_v_2.txt: 2 segment(s) without trains replaced
+2026-11-20 15:57:18   fixed fl_k4_212.txt          on time 26:42  median 26:06  p90 26:39
+2026-11-20 15:57:18   fixed it4_1.txt              on time 24:51  median 26:22  p90 27:12
+2026-11-20 15:57:18   fixed k4_501.txt             on time 30:44  median 30:47  p90 30:53
+2026-11-20 15:57:18   fixed pl_157403_v_1.txt      on time 29:27  median 33:15  p90 33:54
+2026-11-20 15:57:18   fixed k4_705.txt             on time 26:03  median 33:20  p90 33:54
+2026-11-20 15:57:18   fixed pl_157442_v_2.txt      on time 25:43  median 33:22  p90 33:56
+2026-11-20 16:12:30 20261123 Mon | fixed: best fl_k4_212.txt on time 26:42 median 26:06 p90 26:39 | tuned: best t500001_p_0.txt on time 23:51 median 25:10 p90 25:59, beat record 0/60
+2026-11-20 16:12:45 20261124: tables built in 14 s
+2026-11-20 16:12:45   fl_k4_212.txt: 2 segment(s) without trains replaced
+2026-11-20 16:12:45   it4_1.txt: 2 segment(s) without trains replaced
+2026-11-20 16:12:45   k4_501.txt: 2 segment(s) without trains replaced
+2026-11-20 16:12:45   k4_705.txt: 2 segment(s) without trains replaced
+2026-11-20 16:12:45   pl_157403_v_1.txt: 2 segment(s) without trains replaced
+2026-11-20 16:12:45   pl_157442_v_2.txt: 2 segment(s) without trains replaced
+2026-11-20 16:12:51   fixed k4_501.txt             on time 23:33  median 24:37  p90 30:44
+2026-11-20 16:12:51   fixed it4_1.txt              on time 24:31  median 26:56  p90 27:36
+2026-11-20 16:12:51   fixed k4_705.txt             on time 24:20  median 28:54  p90 29:15
+2026-11-20 16:12:51   fixed pl_157442_v_2.txt      on time 24:20  median 29:03  p90 29:17
+2026-11-20 16:12:51   fixed pl_157403_v_1.txt      on time 24:20  median 29:04  p90 29:17
+2026-11-20 16:12:51   fixed fl_k4_212.txt          on time 24:11  median 29:54  p90 30:28
+2026-11-20 16:28:04 20261124 Tue | fixed: best k4_501.txt on time 23:33 median 24:37 p90 30:44 | tuned: best t500004_p_2.txt on time 23:40 median 25:12 p90 26:18, beat record 0/60
+2026-11-20 16:28:18 20261125: tables built in 14 s
+2026-11-20 16:28:18   fl_k4_212.txt: 2 segment(s) without trains replaced
+2026-11-20 16:28:18   it4_1.txt: 2 segment(s) without trains replaced
+2026-11-20 16:28:18   k4_501.txt: 2 segment(s) without trains replaced
+2026-11-20 16:28:18   k4_705.txt: 2 segment(s) without trains replaced
+2026-11-20 16:28:18   pl_157403_v_1.txt: 2 segment(s) without trains replaced
+2026-11-20 16:28:18   pl_157442_v_2.txt: 2 segment(s) without trains replaced
+2026-11-20 16:28:24   fixed pl_157442_v_2.txt      on time 24:00  median 24:40  p90 29:12
+2026-11-20 16:28:24   fixed k4_705.txt             on time 24:00  median 24:48  p90 28:57
+2026-11-20 16:28:24   fixed k4_501.txt             on time 23:33  median 24:16  p90 30:36
+2026-11-20 16:28:24   fixed pl_157403_v_1.txt      on time 24:00  median 24:56  p90 29:10
+2026-11-20 16:28:24   fixed it4_1.txt              on time 24:31  median 26:52  p90 27:40
+2026-11-20 16:28:24   fixed fl_k4_212.txt          on time 24:11  median 26:06  p90 30:08
+2026-11-20 16:43:37 20261125 Wed | fixed: best pl_157442_v_2.txt on time 24:00 median 24:40 p90 29:12 | tuned: best t500006_p_3.txt on time 23:09 median 23:50 p90 28:40, beat record 1/60
+2026-11-20 16:43:52 20261126: tables built in 15 s
+2026-11-20 16:43:56   fixed pl_157403_v_1.txt      on time 38:48  median 40:27  p90 41:14
+2026-11-20 16:43:56   fixed pl_157442_v_2.txt      on time 39:36  median 40:40  p90 41:10
+2026-11-20 16:43:56   fixed k4_705.txt             on time 39:12  median 40:46  p90 41:32
+2026-11-20 16:43:56   fixed fl_k4_212.txt          on time 40:30  median 41:22  p90 41:55
+2026-11-20 16:43:56   fixed k4_501.txt             on time 41:42  median 42:30  p90 43:10
+2026-11-20 16:43:56   fixed it4_1.txt              on time 43:23  median 44:46  p90 45:26
+2026-11-20 16:59:05 20261126 Thu | fixed: best pl_157403_v_1.txt on time 38:48 median 40:27 p90 41:14 | tuned: best t500007_p_4.txt on time 24:25 median 26:01 p90 43:45, beat record 0/60
+2026-11-20 16:59:20 20261127: tables built in 15 s
+2026-11-20 16:59:26   fixed pl_157403_v_1.txt      on time 23:03  median 23:48  p90 24:45
+2026-11-20 16:59:26   fixed pl_157442_v_2.txt      on time 23:03  median 24:00  p90 24:49
+2026-11-20 16:59:26   fixed k4_705.txt             on time 23:23  median 24:05  p90 25:00
+2026-11-20 16:59:26   fixed fl_k4_212.txt          on time 24:11  median 25:01  p90 26:20
+2026-11-20 16:59:26   fixed it4_1.txt              on time 23:31  median 25:48  p90 26:47
+2026-11-20 16:59:26   fixed k4_501.txt             on time 23:53  median 24:35  p90 30:41
+2026-11-20 17:14:39 20261127 Fri | fixed: best pl_157403_v_1.txt on time 23:03 median 23:48 p90 24:45 | tuned: best t500010_p_5.txt on time 23:24 median 24:04 p90 24:46, beat record 0/60
+2026-11-20 17:14:40 done: out/dates/summary.csv

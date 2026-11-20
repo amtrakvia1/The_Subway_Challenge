@@ -263,3 +263,28 @@ delays is. Rescore with DATA=data_t for routes built on data_t (datom ids differ
 * Conclusion: the robust ceiling of this model is about 23:40 median, ~1.5 h off the record. Better search at the same
   model is giving minutes, not hours. The next big questions are model-level: is the delay model / fixed-order rider
   too pessimistic (validate against a real attempt log), and how much a good attempt date saves (planned work).
+
+## 20 Nov afternoon: choosing a date (src/build_dated.py, src/compare_dates.py, src/date_work.py)
+* Feed: MTA supplemented subway GTFS, https://rrgtfsfeeds.s3.amazonaws.com/gtfs_supplemented.zip (planned work for
+  roughly the next 7 days, plus holidays further out). Same stop ids as the bundled regular feed. Not committed (19 MB).
+* `build_dated.py <supp_gtfs> data dates/<D> <D>`: network for one date with the SAME structure as data/ (route files stay
+  valid). Trips of service day D, wrapped mod 24 h like the weekday build. Checked: on the regular feed it reproduces
+  data/conn.bin byte for byte. Segment directions the base lacks but the date runs are appended as new directed atoms
+  (ids >= 480; e.g. 23-25 Nov the 7's 52 St / 69 St skip runs the other way). Route files using them only work on that date.
+  Limitation (cyclic day): the last hours of a ~24 h run meet D's early-morning trains, not D+1's.
+* `compare_dates.py <supp_gtfs> <D>...`: per date: feasibility (a group with no train all day = impossible), the seeds
+  ridden as planned (a segment with no train all day swapped for a served option), then 2 x 15 min re-anneal from the
+  2 best, all scored on 60 simulated days (seed 7). `solve` got `KEEP_PARTTIME=1` (do not drop part-time options).
+* `date_work.py gtfs dates <D>...`: stations without trains, and lines under half their normal service by hour.
+* Results for 21-27 Nov (results/dates-2026-11-21-to-27; regular weekday baseline: median 23:34, p90 24:45):
+  - Sat 21, Sun 22: NOT POSSIBLE. No J/M/Z trains at Bowery, Broad St, Flushing Av, Hewes St, Lorimer St, Marcy Av,
+    Delancey/Canal/Chambers/Fulton J platforms all day.
+  - Mon 23: best 25:10 / p90 25:59. Rockaway shuttle (H) under half service 01-05, i.e. exactly the start.
+  - Tue 24: best median 24:37 but p90 30:44 (k4_501 as planned); re-annealed 25:12 / 26:18. 5 line work 00-05.
+  - Wed 25: 23:50 / p90 28:40 (re-annealed). 5 line work 00-05.
+  - Thu 26 (Thanksgiving, Sunday timetable): weekday routes need 40 h; 15 min re-anneal only reached 26:01 / 43:45.
+    A weekend/holiday timetable needs a fresh long search, not a repair of a weekday route.
+  - Fri 27: pl_157403_v_1 as planned 23:48 / p90 24:45, within ~15 min of a normal weekday. Best date of the week.
+* Lessons: the feed only looks ~1 week ahead, so a date cannot be fixed months in advance from it; re-run in the week
+  before the attempt. Overnight work at the start (Rockaways) and multi-day line suspensions decide the day. Tuning per
+  date here was short (30 min of CPU), so the dated medians are upper bounds.

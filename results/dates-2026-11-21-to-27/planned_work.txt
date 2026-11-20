@@ -1,0 +1,16 @@
+== 20261121 (date 20261121: L0S3 Saturday (+ after-midnight starts of 20261120))
+   no trains at all: Flushing Av, Lorimer St, Hewes St, Marcy Av, Delancey St-Essex St, Bowery, Canal St, Chambers St, Fulton St, Broad St
+   5   under half of normal service 09-11, 12-14, 16-19
+   7   under half of normal service 16-20
+   M   under half of normal service 06-24
+== 20261122 (date 20261122: L0S4 Sunday Sunday_C8 (+ after-midnight starts of 20261121))
+   no trains at all: Flushing Av, Lorimer St, Hewes St, Marcy Av, Delancey St-Essex St, Bowery, Canal St, Chambers St, Fulton St, Broad St
+   M   under half of normal service 08-24
+== 20261123 (date 20261123: L0S5 L1S3 L2S3 Weekday Weekday_C3 (+ after-midnight starts of 20261122))
+   H   under half of normal service 01-05
+== 20261124 (date 20261124: L0S6 L1S4 L2S4 Weekday Weekday_C3 (+ after-midnight starts of 20261123))
+   5   under half of normal service 00-05
+== 20261125 (date 20261125: L0S7 L1S5 L2S5 Weekday Weekday_C3 (+ after-midnight starts of 20261124))
+   5   under half of normal service 00-05
+== 20261126 (date 20261126: L0S8 Sunday Sunday_C6 (+ after-midnight starts of 20261125))
+== 20261127 (date 20261127: L0S9 L1S6 Weekday Weekday_C2 Weekday_C3 Weekday_C5 (+ after-midnight starts of 20261126))
